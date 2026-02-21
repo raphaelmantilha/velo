@@ -1,11 +1,11 @@
 export function generateOrderCode() {
-    const alphanumeric = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const prefix = 'VLO';
+    const alphanumeric = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    const prefix = 'VLO'
   
-    let suffix = '';
+    let suffix = ''
     for (let i = 0; i < 6; i++) {
-      suffix += alphanumeric.charAt(Math.floor(Math.random() * alphanumeric.length));
+      suffix += alphanumeric.charAt(Math.floor(Math.random() * alphanumeric.length))
     }
   
-    return `${prefix}-${suffix}`;
+    return `${prefix}-${suffix}`
   }
