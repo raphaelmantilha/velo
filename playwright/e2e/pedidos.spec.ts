@@ -95,22 +95,14 @@ test.describe('Consulta de Pedido', () => {
   })
 
   test('deve exibir mensagem quando o pedido não é encontrado', async ({ page }) => {
-
     const order = generateOrderCode()
-
-    const orderLockupPage = new OrderLockupPage(page)
     await orderLockupPage.searchOrder(order)
-
     await orderLockupPage.validateOrderNotFound();
   })
 
   test('deve exibir mensagem quando o pedido em qualquer formato não é encontrado', async ({ page }) => {
-
     const order = 'ABC123'
-
-    const orderLockupPage = new OrderLockupPage(page)
     await orderLockupPage.searchOrder(order)
-
     await orderLockupPage.validateOrderNotFound();
   })
 })
